@@ -16,7 +16,7 @@ async function searchRecipes() {
     const data = await res.json();
 
     loading.style.display = "none";
-
+ 
     if (data.meals) {
       recipesGrid.innerHTML = data.meals.map(recipe => `
         <div class="recipe-card">
