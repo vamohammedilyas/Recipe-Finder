@@ -2,7 +2,7 @@ async function searchRecipes() {
   const query = document.getElementById("searchInput").value.trim();
   const recipesGrid = document.getElementById("recipesGrid");
   const loading = document.getElementById("loading");
-
+//conditions
   if (!query) {
     recipesGrid.innerHTML = "<p>Please enter a recipe name.</p>";
     return;
@@ -10,7 +10,7 @@ async function searchRecipes() {
 
   recipesGrid.innerHTML = "";
   loading.style.display = "block";
-
+//exception
   try {
     const res = await fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${query}`);
     const data = await res.json();
