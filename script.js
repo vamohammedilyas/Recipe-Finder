@@ -29,7 +29,7 @@ async function searchRecipes() {
     } else {
       recipesGrid.innerHTML = "<p>No recipes found. Try another search.</p>";
     }
-
+// Catch Block
   } catch (error) {
     loading.style.display = "none";
     recipesGrid.innerHTML = "<p>Error fetching recipes. Please try again.</p>";
